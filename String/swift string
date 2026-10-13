@@ -20,7 +20,7 @@ string.lowercased()
 import Foundation
 
 // 1. Creating Strings
-let name: String = "Manikandan"
+let name: String = "Cowsican"
 var city: String = "Coimbatore"
 
 print("Name: \(name)")
@@ -35,8 +35,8 @@ let word = "Swift"
 print("Length: \(word.count)")
 
 // 4. String Concatenation
-let firstName = "Mani"
-let lastName = "Kandan"
+let firstName = "cow"
+let lastName = "si"
 let fullName = firstName + " " + lastName
 print("Full Name: \(fullName)")
 
