@@ -1,0 +1,40 @@
+//text in the formated
+
+import SwiftUI
+
+struct LoginPageView : View{
+    var body : some View {
+       VStack(spacing: 100){
+
+       Text("one ")
+       .italic()
+
+       Text("Two")
+    
+       Text("Three")
+        
+       }
+       .frame(maxWidth : .infinity ,maxHeight : .infinity)
+       .bold()
+       .font(.title)
+       .foregroundColor(.black)
+       .background(.skyblue)
+    }
+}
+
+//Secure field
+
+struct Login : View {
+    @State private var password = ""
+    var body : some View {
+
+
+       VStack{
+        Text("Password")
+        SecureField("Password",Text : $password)
+        .frame(width: 160)
+       }
+       .background(.lightblue)
+       .frame(maxWidth : .infinity , maxHeight : .infinity)
+    }
+}
