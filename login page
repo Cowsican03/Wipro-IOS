@@ -1,0 +1,26 @@
+import SwiftUI
+
+struct ContentView: View {
+    @State private var username = ""
+    @State private var password = ""
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Login")
+                .font(.largeTitle)
+                .bold()
+
+            TextField("Enter username", text: $username)
+                .textFieldStyle(.roundedBorder)
+
+            SecureField("Enter password", text: $password)
+                .textFieldStyle(.roundedBorder)
+
+            Button("Sign In") {
+                print("Username: \(username)")
+            }
+            .buttonStyle(.borderedProminent)
+        }
+        .padding()
+    }
+}
