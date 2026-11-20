@@ -1,0 +1,29 @@
+import SwiftUI
+
+struct ContentView: View {
+    @State private var count = 0
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Counter App")
+                .font(.largeTitle)
+                .bold()
+
+            Text("\(count)")
+                .font(.system(size: 50))
+
+            Button("Increase") {
+                count += 1
+            }
+            .padding()
+            .background(.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    ContentView()
+}
