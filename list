@@ -1,0 +1,18 @@
+
+import SwiftUI
+
+struct ContentView: View {
+
+    let students = ["Arun", "Kumar", "Rahul", "Priya", "John"]
+
+    var body: some View {
+        NavigationStack {
+            List {
+                ForEach(students, id: \.self) { student in
+                    Text(student)
+                }
+            }
+            .navigationTitle("Students")
+        }
+    }
+}
