@@ -1,0 +1,24 @@
+
+import SwiftUI
+
+struct ContentView: View {
+    @State private var username = "Student"
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Hello \(username)")
+
+            NameEditor(name: $username)
+        }
+        .padding()
+    }
+}
+
+struct NameEditor: View {
+    @Binding var name: String
+
+    var body: some View {
+        TextField("Enter name", text: $name)
+            .textFieldStyle(.roundedBorder)
+    }
+}
