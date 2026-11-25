@@ -1,0 +1,52 @@
+
+import SwiftUI
+
+struct ContentView: View {
+    @State private var num1 = ""
+    @State private var num2 = ""
+    @State private var result = 0.0
+
+    var body: some View {
+        VStack(spacing: 15) {
+            Text("Calculator")
+                .font(.largeTitle)
+
+            TextField("First Number", text: $num1)
+                .keyboardType(.decimalPad)
+                .textFieldStyle(.roundedBorder)
+
+            TextField("Second Number", text: $num2)
+                .keyboardType(.decimalPad)
+                .textFieldStyle(.roundedBorder)
+
+            HStack {
+                Button("+") {
+                    result = (Double(num1) ?? 0) + (Double(num2) ?? 0)
+                }
+
+                Button("-") {
+                    result = (Double(num1) ?? 0) - (Double(num2) ?? 0)
+                }
+
+                Button("*") {
+                    result = (Double(num1) ?? 0) * (Double(num2) ?? 0)
+                }
+
+                Button("/") {
+                    let a = Double(num1) ?? 0
+                    let b = Double(num2) ?? 0
+                    result = b == 0 ? 0 : a / b
+                }
+            }
+            .buttonStyle(.borderedProminent)
+
+            Text("Result: \(result)")
+                .font(.title2)
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    ContentView()
+}
