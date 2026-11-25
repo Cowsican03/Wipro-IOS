@@ -1,0 +1,23 @@
+
+import SwiftUI
+
+struct ContentView: View {
+    @State private var isBlue = false
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Change Background")
+                .font(.title)
+
+            Button("Change Color") {
+                isBlue.toggle()
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(isBlue ? Color.blue : Color.yellow)
+    }
+}
+
+#Preview {
+    ContentView()
+}
